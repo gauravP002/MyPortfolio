@@ -1,20 +1,23 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import useIntersectionObserver from '../hooks/useIntersectionObserver';
 
-const SectionWrapper = <P extends object,>(
-  Component: React.ComponentType<P>,
-  idName: string
-): React.FC<P> => {
-  return (props: P) => (
-    <motion.section
-      id={idName}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.25 }}
-      className="container mx-auto px-6 py-16 md:py-20"
+interface SectionWrapperProps {
+  children: React.ReactNode;
+  id: string;
+}
+
+const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, id }) => {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const isVisible = useIntersectionObserver(ref, { threshold: 0.1 });
+
+  return (
+    <section 
+      id={id}
+      ref={ref}
+      className={`section-container animated-section ${isVisible ? 'is-visible' : ''}`}
     >
-      <Component {...props} />
-    </motion.section>
+      {children}
+    </section>
   );
 };
 

@@ -1,10 +1,4 @@
-
 import { Skill, Project, Experience, NavLink, SocialLink } from '../types';
-import { 
-  FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaAngular, FaGitAlt, FaLinkedin, FaGithub, FaTwitter 
-} from 'react-icons/fa';
-import { SiTypescript, SiTailwindcss, SiJest, SiFramer } from 'react-icons/si';
-import { MdEmail } from 'react-icons/md';
 
 export const navLinks: NavLink[] = [
   { id: 'home', title: 'Home' },
@@ -16,16 +10,16 @@ export const navLinks: NavLink[] = [
 ];
 
 export const skills: Skill[] = [
-  { name: 'HTML5', icon: FaHtml5, color: '#E34F26' },
-  { name: 'CSS3', icon: FaCss3Alt, color: '#1572B6' },
-  { name: 'JavaScript', icon: FaJsSquare, color: '#F7DF1E' },
-  { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
-  { name: 'React', icon: FaReact, color: '#61DAFB' },
-  { name: 'Angular', icon: FaAngular, color: '#DD0031' },
-  { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
-  { name: 'Framer Motion', icon: SiFramer, color: '#0055FF' },
-  { name: 'Jest', icon: SiJest, color: '#C21325' },
-  { name: 'Git', icon: FaGitAlt, color: '#F05032' },
+  { name: 'HTML5', icon: 'html5', color: '#E34F26' },
+  { name: 'CSS3', icon: 'css3', color: '#1572B6' },
+  { name: 'JavaScript', icon: 'javascript', color: '#F7DF1E' },
+  { name: 'TypeScript', icon: 'typescript', color: '#3178C6' },
+  { name: 'React', icon: 'react', color: '#61DAFB' },
+  { name: 'Angular', icon: 'angular', color: '#DD0031' },
+  { name: 'Tailwind CSS', icon: 'tailwind', color: '#06B6D4' },
+  { name: 'Framer Motion', icon: 'framer', color: '#0055FF' },
+  { name: 'Jest', icon: 'jest', color: '#C21325' },
+  { name: 'Git', icon: 'git', color: '#F05032' },
 ];
 
 export const projects: Project[] = [
@@ -33,7 +27,7 @@ export const projects: Project[] = [
     title: 'Netflix Clone',
     description: 'A feature-rich clone of the Netflix streaming service, built with React and powered by the TMDB API for movie data. Includes user authentication and a dynamic UI.',
     image: 'https://picsum.photos/seed/netflix/400/300',
-    tags: ['React', 'Tailwind CSS', 'Firebase', 'TMDB API'],
+    tags: ['React', 'CSS', 'Firebase', 'TMDB API'],
     liveUrl: '#',
     githubUrl: '#',
   },
@@ -49,7 +43,7 @@ export const projects: Project[] = [
     title: 'Admin Dashboard',
     description: 'A comprehensive admin dashboard for data visualization and management. Implemented with React and Chart.js to provide insightful analytics and interactive charts.',
     image: 'https://picsum.photos/seed/dashboard/400/300',
-    tags: ['React', 'Chart.js', 'Material UI', 'Context API'],
+    tags: ['React', 'Chart.js', 'CSS', 'Context API'],
     liveUrl: '#',
     githubUrl: '#',
   },
@@ -71,10 +65,10 @@ export const experiences: Experience[] = [
     description: [
       'Developed and maintained scalable web applications using Angular and React, improving user engagement by 25%.',
       'Collaborated with cross-functional teams to define, design, and ship new features.',
-      'Implemented responsive UI components with Tailwind CSS, ensuring cross-browser compatibility.',
+      'Implemented responsive UI components with CSS, ensuring cross-browser compatibility.',
       'Wrote unit and integration tests using Jest and React Testing Library to ensure code quality.',
     ],
-    technologies: ['Angular', 'React', 'TypeScript', 'Jest', 'Tailwind CSS', 'Jenkins'],
+    technologies: ['Angular', 'React', 'TypeScript', 'Jest', 'CSS', 'Jenkins'],
   },
   {
     role: 'Frontend Developer',
@@ -91,8 +85,8 @@ export const experiences: Experience[] = [
 ];
 
 export const socialLinks: SocialLink[] = [
-  { name: 'LinkedIn', icon: FaLinkedin, url: 'https://www.linkedin.com/' },
-  { name: 'GitHub', icon: FaGithub, url: 'https://github.com/' },
-  { name: 'Twitter', icon: FaTwitter, url: 'https://twitter.com/' },
-  { name: 'Email', icon: MdEmail, url: 'mailto:gaurav.pandey@example.com' },
+  { name: 'LinkedIn', icon: 'linkedin', url: 'https://www.linkedin.com/' },
+  { name: 'GitHub', icon: 'github', url: 'https://github.com/' },
+  { name: 'Twitter', icon: 'twitter', url: 'https://twitter.com/' },
+  { name: 'Email', icon: 'email', url: 'mailto:gaurav.pandey@example.com' },
 ];

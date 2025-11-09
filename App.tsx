@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { HashRouter } from 'react-router-dom';
 import Header from './components/Header';
@@ -9,19 +8,20 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import SectionWrapper from './components/SectionWrapper';
 
 function App() {
   return (
     <HashRouter>
-      <div className="flex flex-col min-h-screen">
+      <div className="app">
         <Header />
-        <main className="flex-grow">
+        <main className="main-content">
           <Hero />
-          <About />
-          <Skills />
-          <Projects />
-          <Experience />
-          <Contact />
+          <SectionWrapper id="about"><About /></SectionWrapper>
+          <SectionWrapper id="skills"><Skills /></SectionWrapper>
+          <SectionWrapper id="projects"><Projects /></SectionWrapper>
+          <SectionWrapper id="experience"><Experience /></SectionWrapper>
+          <SectionWrapper id="contact"><Contact /></SectionWrapper>
         </main>
         <Footer />
       </div>

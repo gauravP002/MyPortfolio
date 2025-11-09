@@ -1,9 +1,6 @@
-
-import { IconType } from 'react-icons';
-
 export interface Skill {
   name: string;
-  icon: IconType;
+  icon: string; // Changed from IconType
   color: string;
 }
 
@@ -20,7 +17,7 @@ export interface Experience {
   role: string;
   company: string;
   period: string;
-  description: string[];
+  description:string[];
   technologies: string[];
 }
 
@@ -31,6 +28,6 @@ export interface NavLink {
 
 export interface SocialLink {
   name: string;
-  icon: IconType;
+  icon: string; // Changed from IconType
   url: string;
 }
