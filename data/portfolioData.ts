@@ -1,4 +1,4 @@
-import { Skill, Project, Experience, NavLink, SocialLink } from '../types';
+import { Skill, Project, Experience, NavLink, SocialLink, AcademicRecord } from '../types';
 
 export const navLinks: NavLink[] = [
   { id: 'home', title: 'Home' },
@@ -6,6 +6,7 @@ export const navLinks: NavLink[] = [
   { id: 'skills', title: 'Skills' },
   { id: 'projects', title: 'Projects' },
   { id: 'experience', title: 'Experience' },
+  { id: 'academics', title: 'Academics' },
   { id: 'contact', title: 'Contact' },
 ];
 
@@ -21,6 +22,29 @@ export const skills: Skill[] = [
   { name: 'Jest', icon: 'jest', color: '#C21325' },
   { name: 'Git', icon: 'git', color: '#F05032' },
 ];
+
+export const aboutMe = {
+  bio: [
+      "As a dedicated Frontend Engineer, I have a strong passion for creating elegant, high-performance web applications with modern UI frameworks like React and Angular.",
+      "My background in mathematics provides me with a unique approach to problem-solving, allowing me to build logical and efficient solutions. I'm committed to writing clean, scalable code and believe in the power of good design to elevate user experience."
+  ],
+  highlights: [
+      "Proficient in modern frontend technologies.",
+      "Strong analytical and problem-solving skills.",
+      "Team player with experience in agile environments.",
+      "Active participant in cultural and tech events."
+  ],
+  hobbies: ["Cricket", "Running", "Gym"],
+  personality: "I enjoy making good friends and exploring new places.",
+  galleryImages: [
+      "https://picsum.photos/seed/cricket/400/400",
+      "https://picsum.photos/seed/running/400/400",
+      "https://picsum.photos/seed/travel/400/400",
+      "https://picsum.photos/seed/friends/400/400",
+      "https://picsum.photos/seed/nature/400/400",
+      "https://picsum.photos/seed/code/400/400"
+  ]
+};
 
 export const projects: Project[] = [
   {
@@ -62,6 +86,7 @@ export const experiences: Experience[] = [
     role: 'Software Engineer',
     company: 'Western Union',
     period: 'Jan 2021 - Present',
+    logo: 'briefcase',
     description: [
       'Developed and maintained scalable web applications using Angular and React, improving user engagement by 25%.',
       'Collaborated with cross-functional teams to define, design, and ship new features.',
@@ -74,6 +99,7 @@ export const experiences: Experience[] = [
     role: 'Frontend Developer',
     company: 'Tech Solutions Inc.',
     period: 'Jun 2019 - Dec 2020',
+    logo: 'briefcase',
     description: [
       'Translated UI/UX design wireframes into high-quality code.',
       'Built reusable components and front-end libraries for future use.',
@@ -81,6 +107,33 @@ export const experiences: Experience[] = [
       'Worked closely with backend developers to integrate APIs.',
     ],
     technologies: ['JavaScript', 'React', 'Redux', 'SCSS', 'Webpack'],
+  },
+];
+
+export const academics: AcademicRecord[] = [
+  {
+    degree: 'Master of Computer Applications (MCA)',
+    institute: 'School of Computer Science & IT, DAVV',
+    period: '2017 - 2019',
+    score: 'Overall Score: 85%',
+    highlights: [
+      'Deepened technical knowledge in web development, data structures, and algorithms.',
+      'Collaborated on multiple team projects, enhancing teamwork and project management skills.',
+      'Actively participated in cultural activities and technical events on campus.',
+    ],
+    logo: 'university',
+  },
+  {
+    degree: 'Bachelor of Science (B.Sc.) in Mathematics',
+    institute: 'Holkar Science College, DAVV',
+    period: '2014 - 2017',
+    score: 'Overall Score: 81%',
+    highlights: [
+      'Developed a strong analytical and logical foundation through rigorous coursework in mathematics.',
+      'Applied mathematical concepts to solve real-world problems, improving problem-solving abilities.',
+      'Enhanced communication skills through presentations and group assignments.',
+    ],
+    logo: 'university',
   },
 ];
 

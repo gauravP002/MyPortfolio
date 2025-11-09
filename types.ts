@@ -19,6 +19,16 @@ export interface Experience {
   period: string;
   description:string[];
   technologies: string[];
+  logo?: string;
+}
+
+export interface AcademicRecord {
+  degree: string;
+  institute: string;
+  period: string;
+  score: string;
+  highlights: string[];
+  logo: string;
 }
 
 export interface NavLink {

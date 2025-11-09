@@ -9,6 +9,7 @@ import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import SectionWrapper from './components/SectionWrapper';
+import Academics from './components/Academics';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <SectionWrapper id="skills"><Skills /></SectionWrapper>
           <SectionWrapper id="projects"><Projects /></SectionWrapper>
           <SectionWrapper id="experience"><Experience /></SectionWrapper>
+          <SectionWrapper id="academics"><Academics /></SectionWrapper>
           <SectionWrapper id="contact"><Contact /></SectionWrapper>
         </main>
         <Footer />

@@ -1,27 +1,47 @@
 import React from 'react';
-import { skills } from '../data/portfolioData';
+import { aboutMe } from '../data/portfolioData';
 import { Icon } from './icons';
 
 const About: React.FC = () => {
   return (
-    <div className="about-layout">
-      <div className="about-layout__info">
-        <h2 className="section-title">About Me</h2>
-        <div className="section-underline"></div>
-        <p className="section-paragraph">
-          I'm a dedicated Frontend Engineer with a strong passion for creating elegant, high-performance web applications. With years of experience in the field, I have honed my skills in modern frameworks like React and Angular, allowing me to build dynamic and responsive user interfaces.
-        </p>
-        <p className="section-paragraph">
-          My journey in tech began with a curiosity for how things work on the web, which quickly evolved into a career. I thrive on solving complex problems and am committed to writing clean, maintainable, and scalable code. I believe in the power of good design and its ability to enhance user experience.
-        </p>
-      </div>
-      <div className="about-layout__stack">
-        <h3 className="about-layout__stack-title">My Tech Stack</h3>
-        <div className="tech-stack-grid">
-          {skills.map((skill) => (
-            <div key={skill.name} className="tech-stack-grid__item">
-              <Icon name={skill.icon} size={40} color={skill.color} />
-              <p className="tech-stack-grid__name">{skill.name}</p>
+    <div className="about-section">
+      <h2 className="section-title">About Me</h2>
+      <div className="section-underline"></div>
+      <div className="about-layout">
+        <div className="about-layout__personal-info">
+          {aboutMe.bio.map((p, i) => <p key={i} className="section-paragraph">{p}</p>)}
+
+          <ul className="about-layout__highlights">
+            {aboutMe.highlights.map((item, index) => (
+              <li key={index}>
+                <Icon name="checkmark" size={20} />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          
+          <div className="about-layout__hobbies">
+            <h3 className="about-layout__hobbies-title">Interests & Hobbies</h3>
+            <div className="hobbies-chips">
+              {aboutMe.hobbies.map(hobby => <span key={hobby} className="hobby-chip">{hobby}</span>)}
+            </div>
+          </div>
+          
+          <p className="about-layout__personality">{aboutMe.personality}</p>
+
+          <div className="about-layout__actions">
+            <a href="/resume.pdf" download className="button button--primary">
+              Download Resume
+            </a>
+            <a href="#contact" className="button button--secondary">
+              Contact Me
+            </a>
+          </div>
+        </div>
+        <div className="about-layout__gallery">
+          {aboutMe.galleryImages.map((src, index) => (
+            <div className="gallery-image-wrapper" key={index}>
+              <img src={src} alt={`Personal gallery image ${index + 1}`} />
             </div>
           ))}
         </div>

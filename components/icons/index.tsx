@@ -57,6 +57,24 @@ export const Icon: React.FC<IconProps> = ({ name, size = 24, ...props }) => {
       return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...iconProps}><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" /><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" /></svg>
       );
+    case 'checkmark':
+        return (
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" {...iconProps}>
+            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+          </svg>
+        );
+    case 'university':
+        return (
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...iconProps}>
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 8.5L6.21 8 12 5l5.79 3L12 11.5z" /><path d="M5 13.18v4.13L12 21l7-3.69v-4.13L12 17l-7-3.82z" />
+          </svg>
+        );
+    case 'briefcase':
+        return (
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...iconProps}>
+            <path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM10 4h4v2h-4V4zm10 17H4V8h16v13z" />
+          </svg>
+        );
     case 'html5': return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...iconProps}><path d="M1.6 2h20.8l-1.8 20L12 24l-8.6-2L1.6 2zm16.5 6H7.7l.3 3.3h9.8l-.6 6.7-4.1 1.4-4.1-1.4-.2-3H5.3l.5 5.5 6.2 2.1 6.2-2.1 1-11.2z"/></svg>;
     case 'css3': return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...iconProps}><path d="M1.6 2h20.8l-1.8 20L12 24l-8.6-2L1.6 2zM17 7H7.7l.3 3.3H17l-.6 6.7-4.4 1.4v-3.4h3.3l.3-3.3H12V7h5z"/></svg>;
     case 'javascript': return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...iconProps}><path d="M1.6 2h20.8v20H1.6V2zm16.5 14.3h-2.2l-1.1-2.2h-3.3v2.2H9.3V7.7h5.5c1.4 0 2.5.3 3.3 1s1.2 1.5 1.2 2.6c0 1-.3 1.8-1 2.5s-1.5 1-2.6 1h-2.2v2.2h3.3l1.1 2.2zm-5.5-3.3h2.2c.8 0 1.4-.1 1.7-.4s.5-.6.5-1.1c0-.4-.1-.8-.4-1s-.7-.4-1.3-.4H12.6v3z"/></svg>;

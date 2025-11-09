@@ -1,5 +1,6 @@
 import React from 'react';
 import { experiences } from '../data/portfolioData';
+import { Icon } from './icons';
 
 const Experience: React.FC = () => {
   return (
@@ -9,6 +10,9 @@ const Experience: React.FC = () => {
       <div className="timeline">
         {experiences.map((exp, index) => (
           <div key={index} className="timeline__item">
+            <div className="timeline__icon-wrapper">
+              {exp.logo && <Icon name={exp.logo} size={20} />}
+            </div>
             <div className="timeline__content">
               <h3 className="timeline__role">{exp.role}</h3>
               <p className="timeline__company">{exp.company}</p>
