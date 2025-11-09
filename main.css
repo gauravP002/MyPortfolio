@@ -503,6 +503,9 @@ html.dark .hero__background-overlay {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-lg);
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media (min-width: 768px) {
   .projects-grid {

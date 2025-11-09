@@ -16,7 +16,9 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({ children, id }) => {
       ref={ref}
       className={`section-container animated-section ${isVisible ? 'is-visible' : ''}`}
     >
-      {children}
+      <div className="container">
+        {children}
+      </div>
     </section>
   );
 };
