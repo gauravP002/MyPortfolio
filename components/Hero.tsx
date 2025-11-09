@@ -36,8 +36,8 @@ const Hero: React.FC = () => {
       <div className="container hero__content">
         <div className="hero__intro">
           <img
-            src="/profile-photo.jpg"
-            alt="Gaurav Pandey"
+            src="/assets1/IMG_3479.jpeg"
+            alt="Gaurav1 Pandey"
             className="hero__image"
           />
           <h1 className="hero__title">
